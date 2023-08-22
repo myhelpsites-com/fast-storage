@@ -1,6 +1,6 @@
 {
   "name": "fast-storage-react-native",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "url": "https://github.com/myhelpsites-com/fast-storage"
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": "^1.19.2"
+    "@react-native-async-storage/async-storage": "^1.17.11",
+    "react": "18.2.0"
   }
 }
