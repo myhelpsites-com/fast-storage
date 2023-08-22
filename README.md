@@ -6,7 +6,9 @@ Este projeto tem como objetivo tornar a utilização do `AsyncStorage` mais rapi
 _
 - `createDataBase`: Como proprio nome diz essa função é usada para criar um banco de dados.
 Caso de uso: 
-```import { createDataBase } from 'fast-storage-react-native'
+
+```
+import { createDataBase } from 'fast-storage-react-native'
 
 function App(){
     const initalData = {
@@ -15,4 +17,5 @@ function App(){
     useEffect(()=>{
         createDataBase("@my_products", initalData) // initalData is optional
     },[])
-}```
+}
+```
