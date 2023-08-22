@@ -32,14 +32,14 @@ function useDataBase(name){
     const [countUpdate, setCountUpdate] = useState(0); // Update count
 
     useEffect(() => { // Get first data
-        handleGetAsyncDataBase();
+        unsetData();
     }, []);
 
     useEffect(() => { // Monitoring update dataBase state and update Storage
         if (countUpdate === 0) { // If first update we dont send asyncStorage, but update count
             setCountUpdate(1)
         } else { // Else we send asyncStorage
-            handleSetAsyncDataBase();
+            setData();
         }
     }, [dataBase]);
 
@@ -71,7 +71,7 @@ function useDataBase(name){
         }
     }
 
-    async function handleGetAsyncDataBase() { // Get data in asyncStorage
+    async function unsetData() { // Get data in asyncStorage
         setLoadingData(true);
 
         try {
@@ -86,14 +86,14 @@ function useDataBase(name){
         }
     }
 
-    async function handleSetAsyncDataBase() { // Get data in asyncStorage
+    async function setData() { // Get data in asyncStorage
         try {
             AsyncStorage.setItem(name, JSON.stringify(dataBase));
         } catch (error) {
             console.error(`[FAST-STORAGE]: Error insert db`)
         }
     }
-    return { loadingData, selectTable, updateTable, createTable, handleGetAsyncDataBase }
+    return { loadingData, selectTable, updateTable, createTable, unsetData }
 }
 
 module.exports = { createDataBase, dataBaseExist, useDataBase }
