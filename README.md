@@ -11,11 +11,11 @@ Este projeto tem como objetivo tornar a utilização do `AsyncStorage` mais rapi
 
 
 #### Hooks do useData, dispensando o uso do async/await:
-- loadingData: simbolo para mostrar quando o dado do asyncStorage veio para o state
-- selectTable: Pega a tabela do banco de dados
-- updateTable: Atualiza a tabela do banco de dados
-- createTable: Cria uma tabela no banco de dados
-- unsetData: Pega os dados do banco de dados e joga no state
+- `loadingData:` simbolo para mostrar quando o dado do `asyncStorage` veio para o `state`
+- `selectTable:` Pega a tabela do banco de dados no `state`
+- `updateTable:` Atualiza a tabela do banco de dados no `state`
+- `createTable:` Cria uma tabela no banco de dados no `state`
+- `unsetData:` Pega os dados do `asyncStorage` e passa no `state`
 
 #### Outras funções:
 
