@@ -10,12 +10,17 @@ Caso de uso:
 ```
 import { createDataBase } from 'fast-storage-react-native'
 
-function App(){
+export function App(){
     const initalData = {
         fruits: ["apple", "banana"]
-    }
+    };
+
     useEffect(()=>{
-        createDataBase("@my_products", initalData) // initalData is optional
-    },[])
+        handleCreateDataBase();
+    },[]);
+
+    async function handleCreateDataBase(){
+        await createDataBase("@my_products", initalData); // initalData is optional
+    }
 }
 ```
